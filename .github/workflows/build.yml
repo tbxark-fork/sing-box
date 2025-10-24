@@ -44,7 +44,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ^1.25.3
       - name: Check input version
@@ -104,12 +104,12 @@ jobs:
           fetch-depth: 0
       - name: Setup Go
         if: ${{ ! (matrix.legacy_go123 || matrix.legacy_go124) }}
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ^1.25.3
       - name: Setup Go 1.24
         if: matrix.legacy_go124
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ~1.24.6
       - name: Cache Go for Windows 7
@@ -300,12 +300,12 @@ jobs:
           fetch-depth: 0
       - name: Setup Go
         if: ${{ ! matrix.legacy_go124 }}
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ^1.25.3
       - name: Setup Go 1.24
         if: matrix.legacy_go124
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ~1.24.6
       - name: Set tag
@@ -365,7 +365,7 @@ jobs:
           fetch-depth: 0
           submodules: 'recursive'
       - name: Setup Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ^1.25.3
       - name: Setup Android NDK
@@ -445,7 +445,7 @@ jobs:
           fetch-depth: 0
           submodules: 'recursive'
       - name: Setup Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ^1.25.3
       - name: Setup Android NDK
@@ -544,7 +544,7 @@ jobs:
           submodules: 'recursive'
       - name: Setup Go
         if: matrix.if
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ^1.25.3
       - name: Set tag
